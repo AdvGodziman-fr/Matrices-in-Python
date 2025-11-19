@@ -1,10 +1,10 @@
 import numpy as np
 
 def create_matrix():
-    rows = int(input('Enter number of rows: '))
-    cols = int(input('Enter number of columns: '))
+    rows = int(input('Enter the number of rows: '))
+    cols = int(input('Enter the number of columns: '))
     matrix = []
-    print('Enter elements for the matrix')
+    print('Enter the elements for the matrix')
     print('-------------------------------')
         
     for i in range(rows):
@@ -13,7 +13,7 @@ def create_matrix():
             raw_rows = row_eles.split()
 
             if len(raw_rows) != cols:
-                print(f'Input of cols = {cols}, but no. of elements is greater pf le')
+                print(f'Input of columns = {cols}, but no. of elements is greater pf le')
                 continue
 
             float_row = [float(j) for j in raw_rows]
@@ -24,17 +24,17 @@ def create_matrix():
  
 class Matrix_Operations(object):
     def __init__(self):
-        print('Instructions for Matrix Operations')
-        print('1. For Matrix Addition and Subtraction, the rows and columns of the matrices should be same.')
-        print('2. For Matrix Multiplication of Mat1(n * m) and Mat2(p * q), n = q and m = p')
+        print('Instructions for Matrix Operations:')
+        print('1. For Addition and Subtraction of Matrix, the rows and columns of the matrices should be same.')
+        print('2. For Multiplication (Matrix) of Mat1(n * m) and Mat2(p * q), n = q and m = p')
         
         global mat1
         global mat2
 
-        print('Create MAtrix 1')
+        print('Create Matrix 1')
         mat1 = create_matrix()
 
-        print('Create MAtrix 2')
+        print('Create Matrix 2')
         mat2 = create_matrix()
 
     def addition(self):
@@ -42,7 +42,7 @@ class Matrix_Operations(object):
             add = np.add(mat1, mat2)
             print(add)
         except:
-            print('Error: There is a mismatch in thenumber of rows and columns in the matrices')
+            print('Error: There is a mismatch in the number of rows and columns in the matrices')
             mat_add1 = create_matrix()
             mat_add2 = create_matrix()
             add = mat_add1 + mat_add2
@@ -53,7 +53,7 @@ class Matrix_Operations(object):
             sub = np.subtract(mat1, mat2)
             print(sub)
         except:
-            print('Error: There is a mismatch in thenumber of rows and columns in the matrices')
+            print('Error: There is a mismatch in the number of rows and columns in the matrices')
             mat_sub1 = create_matrix()
             mat_sub2 = create_matrix()
             sub = np.subtract(mat_sub1, mat_sub2)
