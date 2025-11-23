@@ -9,8 +9,8 @@ def create_matrix():
         
     for i in range(rows):
         while True:
-            row_eles = input(f'Enter the elements for row {i + 1}: ')
-            raw_rows = row_eles.split()
+            row_eles = input(f"Enter the elements for row {i + 1} separating them using commas: ")
+            raw_rows = row_eles.split(',')
 
             if len(raw_rows) != cols:
                 print(f'Input of columns = {cols}, but no. of elements is greater pf le')
@@ -33,10 +33,10 @@ class Matrix_Operations(object):
         global mat1
         global mat2
 
-        print('Create Matrix 1')
+        print('Create the first Matrix:')
         mat1 = create_matrix()
 
-        print('Create Matrix 2')
+        print('Create the second Matrix:')
         mat2 = create_matrix()
 
     def addition(self):
