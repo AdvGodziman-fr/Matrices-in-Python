@@ -10,16 +10,18 @@ def create_matrix():
         rows = int(input('Enter the number of rows: '))
     except ValueError:
         print('The value of rows should be a integer and not any other data type')
-        cols = int(input('Enter the number of columns: '))
+        rows = int(input('Enter the number of rows: '))
 
     try:
         cols = int(input('Enter the number of columns: '))
     except:
         print('The value of rows should be a integer and not any other data type')
+        cols = int(input('Enter the number of columns: '))
+
         
 
     matrix = []
-    print('Enter the elements for the matrix: ')
+    print('Enter the elements for the matrix')
     print()
         
     for i in range(rows):
@@ -31,7 +33,7 @@ def create_matrix():
                 print(f'Input of columns = {cols}, but no. of elements is greater pf le')
                 continue
 
-            float_row = [3 for j in raw_rows]
+            float_row = [float(j) for j in raw_rows]
             np.array(matrix.append(float_row))
             break
 
@@ -39,7 +41,7 @@ def create_matrix():
  
 class Matrix_Operations(object):
     def __init__(self):
-        print('INSTRUCTIONS FOR MATRIX OPERATIONS')
+        print('INSTRUCTIONS FOR Matrix MATRIX OPERATIONS')
         print('\n1. For Addition and Subtraction of Matrix, the rows and columns of the matrices should be same.')
         print('2. For Multiplication (Matrix) of Mat1(n * m) and Mat2(p * q), n = q and m = p')
         print()
@@ -139,7 +141,7 @@ class Matrix_Operations(object):
         print('--------------------------------------')
         trans_mat1_ = np.transpose(mat1)
         trans_mat2_ = np.transpose(mat2)
-        print(f'Transposef Matrix 1 = {trans_mat1_}')
+        print(f'Transposed Matrix 1 = {trans_mat1_}')
         print(f'Transposed Matrix 2 = {trans_mat2_}')
 
         print('\n******************************************')
@@ -162,22 +164,13 @@ class Matrix_Operations(object):
         print(f'Determinants of Matrix 2 = {det2}')
         print('\n******************************************')
 
-
 workspace = Matrix_Operations()
-
-print('Matrix Addition:')
 workspace.addition()
-print('Matrix Subtraction:')
 workspace.subtraction()
-print('Scalar-Matrix Multiplications:')
 workspace.scalar_matrix_multiplications()
-print('Matrix Multiplication:')
 workspace.matrix_multiplication()
-print('Matrix Transposition:')
 workspace.transpose_elements()
-print('Finding Determinants:')
 workspace.determinants()
-print('Matrix Inversion:')
 workspace.inverse_matrix()
 
 print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
