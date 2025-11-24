@@ -1,7 +1,6 @@
 import numpy as np
 
 def create_matrix():
-
     while True:
         try:
             rows = int(input('Enter the number of rows: '))
@@ -38,7 +37,7 @@ def create_matrix():
 
 class Matrix_Operations(object):
     def __init__(self):
-        print('INSTRUCTIONS FOR Matrix MATRIX OPERATIONS')
+        print('INSTRUCTIONS FOR MATRIX OPERATIONS')
         print('\n1. For Addition and Subtraction of Matrix, the rows and columns of the matrices should be same.')
         print('2. For Multiplication (Matrix) of Mat1(n * m) and Mat2(p * q), m = p')
         print()
